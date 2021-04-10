@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="region"
+            type="com.example.themealapp.model.region.Meal" />
+        <variable
+            name="clickListener"
+            type="com.example.themealapp.clicklistener.ClickListener" />
+    </data>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/regio_back"
+        android:layout_margin="5dp"
+        android:onClick="@{(v)->clickListener.onRegionClick(v, region.strArea)}">
+
+        <TextView
+            android:id="@+id/region_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{region.strArea}"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+</layout>

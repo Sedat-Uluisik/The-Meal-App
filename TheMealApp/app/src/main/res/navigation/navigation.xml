@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.themealapp.fragment.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_foodListFragment"
+            app:destination="@id/foodListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodListFragment"
+        android:name="com.example.themealapp.fragment.FoodListFragment"
+        android:label="Food List"
+        tools:layout="@layout/fragment_food_list">
+        <action
+            android:id="@+id/action_foodListFragment_to_foodDetailFragment"
+            app:destination="@id/foodDetailFragment" />
+        <argument
+            android:name="region"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="category"
+            android:defaultValue="0"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodDetailFragment"
+        android:name="com.example.themealapp.fragment.FoodDetailFragment"
+        android:label="Food Detail"
+        tools:layout="@layout/fragment_food_detail">
+        <argument
+            android:name="foodId"
+            android:defaultValue="0"
+            app:argType="string" />
+    </fragment>
+</navigation>
