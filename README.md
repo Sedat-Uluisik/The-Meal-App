@@ -1,7 +1,7 @@
 # The-Meal-App
 #### Yemek listesi uygulaması
 
-Uygulamada MVVM, Room Database, Retrofit yöntemlerini kullandım. <br/>
+Uygulamada MVVM, Room Database, Retrofit, Databinding yöntemlerini kullandım. <br/>
 Retrofit ile api'den aldığım verileri uygulamada gösterdim.<br/>
 Temiz kod yazmaya çalıştım.
 
